@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển đổi nhiệt độ</h1>
+<p>Nhập vào độ F để chuyển đổi sang độ C:</p>
+<label for="doF">ĐỘ F:</label>
+<input type="number" name="doF" id="doF" oninput="chuyendoiDoF(this.value)" onchange="chuyendoiDoF(this.value)">
+<p>Độ C: <span id="doC"></span></p>
+<script>
+  function chuyendoiDoF(f) {
+    f = parseFloat(f);
+    c = (f - 32) / (9 / 5);
+    document.querySelector('#doC').innerHTML = c;
+  }
+</script>
+</body>
+</html>
